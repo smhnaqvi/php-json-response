@@ -1,2 +1,3 @@
 # php-json-response
-small library for create json response for rest api
+
+simple library for create json response for rest api
