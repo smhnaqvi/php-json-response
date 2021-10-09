@@ -1,33 +1,18 @@
 # php-json-response
 
-#### simple library for create json response for rest api
+#### simple library for rest apis to create easily json response
 
 ```php
+// create response instance
 $res = new Response();
 ```
 
-### ::getData
+### ::setStatus
 
-return your setup response data.
-
-```php
-$data = $res->getData();
-```
-
-### ::getStatus
-
-return response status boolean value.
+set your response status accept boolean value `true or false`
 
 ```php
-$status = $res->getStatus();
-```
-
-### ::getErrors
-
-return your setup error from response instance.
-
-```php
-$errors = $res->getErrors();
+$res->setStatus(false); // default value is false 
 ```
 
 ### ::setData
@@ -65,17 +50,36 @@ $errors->addErrorCode(1105);
 $res->setErrors($errors->getErrorsCodes());
 ```
 
-### ::setStatus
+### ::getData
 
-set your response status accept boolean value `true or false`
+return your setup response data.
 
 ```php
-$res->setStatus(false); // default set false 
+$data = $res->getData();
 ```
 
+### ::getStatus
+
+return response status boolean value.
+
+```php
+$status = $res->getStatus();
+```
+
+### ::getErrors
+
+return your setup error from response instance.
+
+```php
+$errors = $res->getErrors();
+```
 ### ::toJson
 
-using `exit()` and `json_encode()` stop php process then show json response.
+in this method set header content-type to application/json for show json response
+
+`header('Content-Type: application/json; charset=utf-8');`
+
+using `exit()` to stop php process and `json_encode()` to encode data to json .
 
 ```php
 $res->toJson();
