@@ -1,0 +1,15 @@
+{
+  "name": "smhnaqvi/json-response",
+  "description": "simple library for rest apis to create easily json response",
+  "type": "library",
+  "authors": [
+    {
+      "name": "smhnaqvi111",
+      "email": "smhanqvi111@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "another-vendor/package": "1.*"
+  }
+}
